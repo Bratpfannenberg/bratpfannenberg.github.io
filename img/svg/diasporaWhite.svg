@@ -26,8 +26,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.979899"
-     inkscape:cx="171.94787"
-     inkscape:cy="89.517284"
+     inkscape:cx="48.70926"
+     inkscape:cy="87.496979"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -45,7 +45,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -54,16 +54,14 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(0,-253)">
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
-       x="3.3354952"
-       y="352.05753"
-       id="text8419"><tspan
-         sodipodi:role="line"
-         id="tspan8417"
-         x="3.3354952"
-         y="352.05753"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:134.05555725px;font-family:'Arial Unicode MS';-inkscape-font-specification:'Arial Unicode MS, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332px;fill:#ffffff;">*</tspan></text>
+    <g
+       aria-label="*"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="text8419">
+      <path
+         d="m 51.053513,273.77117 q -7.789361,2.42191 -16.364203,3.60013 3.07647,2.74919 11.389485,12.37134 l -7.920274,5.62928 q -3.861952,-5.17108 -8.967584,-14.07321 -4.778347,9.0985 -8.574843,14.07321 l -7.658447,-5.62928 q 9.622152,-11.5204 10.865831,-12.37134 -9.491238,-1.89825 -16.0369193,-3.60013 l 3.0764703,-9.36032 q 11.91314,4.38561 15.120524,6.41477 -1.309136,-11.32403 -1.309136,-16.36421 h 9.360324 q 0,6.02203 -1.178222,14.72779 -0.327284,0.4582 -0.327284,1.5055 6.218397,-3.07647 15.447808,-6.28385 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:134.05555725px;font-family:'Arial Unicode MS';-inkscape-font-specification:'Arial Unicode MS, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;stroke-width:0.26458332px"
+         id="path8416" />
+    </g>
   </g>
 </svg>
