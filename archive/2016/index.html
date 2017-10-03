@@ -450,6 +450,7 @@ color: #f07300;
 figcaption{
 text-align: center;
 font-size:70%;
+white-space: nowrap;
 }
 blockquote{
 background: #f9f9f9;
@@ -466,6 +467,32 @@ white-space: pre;
 line-height: 0.1em;
 margin-left: -0.25em;
 vertical-align: -0.6em;
+}
+
+@keyframes splashanim {
+    0% {opacity:0;visibility: visible;}
+    25% {opacity:1;}
+    50% {opacity:1;}
+    100% {opacity:0;visibility: hidden;}
+}
+
+.splash {
+position:absolute;
+z-index:1001;
+opacity:0;
+visibility: hidden;
+
+    height:100vh;
+    width: 100%;
+    background: url('https://3.bp.blogspot.com/-VqgQ1bkqygg/WdNyYgIlqjI/AAAAAAAAF-0/5B4O6dtgntUsib9-RVDsUBU9vJqDGHCogCLcBGAs/s1600/logoWithTextSplash.jpg') no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    animation-name: splashanim;
+    animation-duration: 1s;
+    
 }
 
 </style>
@@ -486,6 +513,7 @@ vertical-align: -0.6em;
 }
 </script>
 </amp-analytics>
+  <div class="splash" id="splash"></div>
 <amp-user-notification id="my-notification"
   layout="nodisplay">
   <div>Diese Webseite verwendet Cookies von Google, um Benutzerzahlen zu messen, und Cookies von Disqus, um Benutzerkommentare zu ermöglichen.
