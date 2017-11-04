@@ -1,2 +1,4 @@
 User-agent: *
 Disallow: /p/impressum/
+Disallow: /p/impressum/index.html
+Disallow: /p/impressum
