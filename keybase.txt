@@ -1,0 +1,55 @@
+==================================================================
+https://keybase.io/mattjawaki
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://bratpfannenberg.com
+  * I am mattjawaki (https://keybase.io/mattjawaki) on keybase.
+  * I have a public key ASBIHCDciYvH7SM3XrssC0ffXVcw61RQ5G1P9MGhsyfcSQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120481c20dc898bc7ed23375ebb2c0b47df5d5730eb5450e46d4ff4c1a1b327dc490a",
+      "host": "keybase.io",
+      "kid": "0120481c20dc898bc7ed23375ebb2c0b47df5d5730eb5450e46d4ff4c1a1b327dc490a",
+      "uid": "2b9f795a5bd62dc6a1acba7cfda18b19",
+      "username": "mattjawaki"
+    },
+    "merkle_root": {
+      "ctime": 1515619254,
+      "hash": "5dd67428828ff815fac2e8b293b478193b97f3dc274849f4ca89550c138e36e4d12ee3c7007743db56b89f7ca4c019e66b1395ee8e3ad2cab64ad1da26c47955",
+      "hash_meta": "4da3b6bfc8064359b1b22cb0ed77fd38e79b5eec8ed19116b009b1368894a1b0",
+      "seqno": 1912549
+    },
+    "service": {
+      "hostname": "bratpfannenberg.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.39"
+  },
+  "ctime": 1515619285,
+  "expire_in": 504576000,
+  "prev": "58a6f1bf3ffde852a855be020e4735e6af5bc5696215be2743e769c17c71e58d",
+  "seqno": 17,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgSBwg3ImLx+0jN167LAtH311XMOtUUORtT/TBobMn3EkKp3BheWxvYWTFA057ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwNDgxYzIwZGM4OThiYzdlZDIzMzc1ZWJiMmMwYjQ3ZGY1ZDU3MzBlYjU0NTBlNDZkNGZmNGMxYTFiMzI3ZGM0OTBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwNDgxYzIwZGM4OThiYzdlZDIzMzc1ZWJiMmMwYjQ3ZGY1ZDU3MzBlYjU0NTBlNDZkNGZmNGMxYTFiMzI3ZGM0OTBhIiwidWlkIjoiMmI5Zjc5NWE1YmQ2MmRjNmExYWNiYTdjZmRhMThiMTkiLCJ1c2VybmFtZSI6Im1hdHRqYXdha2kifSwibWVya2xlX3Jvb3QiOnsiY3RpbWUiOjE1MTU2MTkyNTQsImhhc2giOiI1ZGQ2NzQyODgyOGZmODE1ZmFjMmU4YjI5M2I0NzgxOTNiOTdmM2RjMjc0ODQ5ZjRjYTg5NTUwYzEzOGUzNmU0ZDEyZWUzYzcwMDc3NDNkYjU2Yjg5ZjdjYTRjMDE5ZTY2YjEzOTVlZThlM2FkMmNhYjY0YWQxZGEyNmM0Nzk1NSIsImhhc2hfbWV0YSI6IjRkYTNiNmJmYzgwNjQzNTliMWIyMmNiMGVkNzdmZDM4ZTc5YjVlZWM4ZWQxOTExNmIwMDliMTM2ODg5NGExYjAiLCJzZXFubyI6MTkxMjU0OX0sInNlcnZpY2UiOnsiaG9zdG5hbWUiOiJicmF0cGZhbm5lbmJlcmcuY29tIiwicHJvdG9jb2wiOiJodHRwczoifSwidHlwZSI6IndlYl9zZXJ2aWNlX2JpbmRpbmciLCJ2ZXJzaW9uIjoxfSwiY2xpZW50Ijp7Im5hbWUiOiJrZXliYXNlLmlvIGdvIGNsaWVudCIsInZlcnNpb24iOiIxLjAuMzkifSwiY3RpbWUiOjE1MTU2MTkyODUsImV4cGlyZV9pbiI6NTA0NTc2MDAwLCJwcmV2IjoiNThhNmYxYmYzZmZkZTg1MmE4NTViZTAyMGU0NzM1ZTZhZjViYzU2OTYyMTViZTI3NDNlNzY5YzE3YzcxZTU4ZCIsInNlcW5vIjoxNywidGFnIjoic2lnbmF0dXJlIn2jc2lnxECIkD4b/VhCIQAczqtlhF9O4URnMdL2SX/Dsp6qGzABEeHLp4WVv9fekZjrRfztJEjbVP1ish0S4WfnCCHXxBEDqHNpZ190eXBlIKRoYXNogqR0eXBlCKV2YWx1ZcQgQ0mk3z8JtafhBSZoz5SVkkntZ5hq6e8AboeTXm49piyjdGFnzQICp3ZlcnNpb24B
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/mattjawaki
+
+==================================================================
