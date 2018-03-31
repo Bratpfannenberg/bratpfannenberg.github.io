@@ -186,7 +186,7 @@ a.btn-spoiler {
 
 .mastodon-timeline-light .mt-footer,
 .mastodon-timeline-light .mt-header {
-	background: #eee;
+	/* background: #eee; */
 }
 
 .mastodon-timeline-light a:link,

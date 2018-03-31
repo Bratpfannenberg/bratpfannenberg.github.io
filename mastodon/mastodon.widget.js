@@ -141,7 +141,7 @@ MastodonApi.text = {
  */
 MastodonApi.prototype.makeWidget = function() {
 	this.widget.addClass('mastodon-timeline');
-	this.widget.append($('<div class="mt-header"><h4>Toots</h4> von <span class="user-link"></span></div>'));
+	this.widget.append($('<div class="mt-header"><h4>Beiträge</h4> von <span class="user-link"></span></div>'));
 	this.widget.append($('<div class="mt-body"><div class="mt-loading">lade...</div></div>'));
 	this.widget.append($('<div class="mt-footer"></div>'));
 };
@@ -258,7 +258,7 @@ MastodonApi.prototype.listStatuses = function() {
 			,'background-size' : 'contain'
 		});
 		// user name and url
-		var user = $("<div class='mt-user'><a href='"+status_.account.url+"'>"+status_.account.username+"</a></div>");
+		var user = $("<div class='mt-user'><b>"+status_.account.display_name+"</b><br /><a href='"+status_.account.url+"'>@"+status_.account.username+"</a></div>");
 
 		// add to HTML
 		toot.append( avatar );
@@ -279,8 +279,8 @@ MastodonApi.prototype.listStatuses = function() {
 
 		// stats (boosts + favourites counts) >>>
 		// data
-		var boostsCountIcon     = '<span class="toot-status-boosts">'     + this.boostsCountIcon     +":"+ status_.reblogs_count    + '</span>';
-		var favouritesCountIcon = '<span class="toot-status-favourites">' + this.favouritesCountIcon +":"+ status_.favourites_count + '</span>';
+		var boostsCountIcon     = '<span class="toot-status-boosts">'     + this.boostsCountIcon     +""+ status_.reblogs_count    + '</span>';
+		var favouritesCountIcon = '<span class="toot-status-favourites">' + this.favouritesCountIcon +""+ status_.favourites_count + '</span>';
 
 		// html nodes
 		var statusBar = $('<div class="toot-status">' +
