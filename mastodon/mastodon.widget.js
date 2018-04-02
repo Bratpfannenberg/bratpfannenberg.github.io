@@ -221,7 +221,28 @@ MastodonApi.prototype.listStatuses = function() {
 	 * @param object status_
 	 */
 	var appendStatus = function(status_) {
-		//console.log( status_ );
+
+//fetch card
+var card;
+
+	// get request
+	$.ajax({
+		url: this.INSTANCE_URI+'/api/v1/statuses/'+status_.id+'/card'
+		,headers: {
+			Authorization : 'Bearer '+this.ACCESS_TOKEN
+		}
+		,method : 'GET'
+		,dataType: 'json'
+		,data : {
+			limit : this.toots_limit
+		}
+		,success: function(data_) {
+		
+host = data_.url.split("/")[2];
+card = '<a href="'+data_.url+'" class="status-card horizontal" style="max-width:'+(data_.width+2)+'px;" target="_blank" rel="noopener"><div class="status-card__image" style="background-image: url(\''+data_.image+'\'); width: '+data_.width+'px; height: '+data_.height+'px;" class="status-card__image-image"></div><div class="status-card__content"><strong class="status-card__title" title="'+data_.title+'">'+data_.title+'</strong><span class="status-card__description">'+data_.description+'</span><span class="status-card__host">'+host+'</span></div></a>';
+
+
+//console.log( status_ );
 		var content;
 
 		// dealing with spoiler content
@@ -235,7 +256,7 @@ MastodonApi.prototype.listStatuses = function() {
 			);
 		}
 		else {
-			content = $(status_.content + 
+			content = $(status_.content + card +
 				'<div class="toot-medias"></div>'
 			);
 		}
@@ -265,6 +286,7 @@ MastodonApi.prototype.listStatuses = function() {
 		toot.append( user );
 		toot.append( timestamp );
 		toot.append( content );
+
 		$('.mt-body', this.widget).append(toot);
 
 		// media attachmets? >>>
@@ -279,17 +301,34 @@ MastodonApi.prototype.listStatuses = function() {
 
 		// stats (boosts + favourites counts) >>>
 		// data
-		var boostsCountIcon     = '<span class="toot-status-boosts">'     + this.boostsCountIcon     +""+ status_.reblogs_count    + '</span>';
-		var favouritesCountIcon = '<span class="toot-status-favourites">' + this.favouritesCountIcon +""+ status_.favourites_count + '</span>';
+		var boostsCountIcon     = '<span class="toot-status-boosts">'     + mapi.boostsCountIcon     +""+ status_.reblogs_count    + '</span>';
+		var favouritesCountIcon = '<span class="toot-status-favourites">' + mapi.favouritesCountIcon +""+ status_.favourites_count + '</span>';
 
 		// html nodes
 		var statusBar = $('<div class="toot-status">' +
 			boostsCountIcon +
 			favouritesCountIcon +
 			'</div>');
-
 		toot.append( statusBar );
 		// <<<
+
+
+
+
+
+			
+		}
+		,error: function(d_) {
+			//console.log( d_ );
+			if(d_.responseJSON) {
+				$('.mt-header', mapi.widget).html('ERROR');
+				$('.mt-body', mapi.widget).html( '<div class="mt-error">' + d_.responseJSON.error + '</div>');
+			}
+		}
+	});
+
+
+		
 	};
 
 

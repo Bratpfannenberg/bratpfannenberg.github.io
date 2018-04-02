@@ -15,9 +15,72 @@
 	margin-bottom: 1em;
 }
 
+.status-card__image{
+
+margin: auto;
+border-bottom: 1px solid lightgrey;
+
+}
+
+div.status-card__content{
+
+padding: 10px;
+
+}
+
+a.status-card{
+display: inline-block;
+border: 1px solid lightgrey;
+border-radius: 4px;
+}
+
+a.status-card:link {
+    color: black;
+}
+
+a.status-card:visited {
+    color: black;
+}
+
+a.status-card:hover {
+    color: black;
+    background: white;
+}
+
+a.status-card:active {
+    color: black;
+} 
+
+.status-card__title{
+font-size: small;
+display:block;
+
+}
+
+.status-card__description{
+
+display:block;
+font-size: x-small;
+
+}
+
+.status-card__host{
+
+font-size: small;
+color:#8899A6;
+
+}
+
+span.ellipsis::after{
+
+ content: "...";
+
+}
+
 .mt-header,
 .mt-footer {
 	padding: 10px 10px;
+
 }
 
 .mastodon-timeline a:link,
@@ -30,6 +93,8 @@
 .mt-header {
 	font-weight: bold;
 	border-bottom: 1px solid purple;
+padding-top: 0;
+padding-bottom: 0;
 }
 
 .mt-header h4 {
@@ -37,7 +102,7 @@
 }
 
 .mt-body {
-	height: 250px;
+	height: 600px;
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
 
@@ -68,6 +133,10 @@
 	padding: 5px 5px 5px 65px;
 	position: relative;
 	min-height: 60px;
+}
+
+.mt-toot:hover {
+	background-color: #FFF7F2;
 }
 
 .mt-footer,
@@ -192,7 +261,7 @@ a.btn-spoiler {
 .mastodon-timeline-light a:link,
 .mastodon-timeline-light a:active,
 .mastodon-timeline-light a {
-	color: #26afff;
+	color: #f07300;
 }
 
 .mastodon-timeline-light .mt-header {
