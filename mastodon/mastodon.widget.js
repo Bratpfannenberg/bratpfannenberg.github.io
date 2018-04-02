@@ -222,26 +222,6 @@ MastodonApi.prototype.listStatuses = function() {
 	 */
 	var appendStatus = function(status_) {
 
-//fetch card
-var card;
-
-	// get request
-	$.ajax({
-		url: this.INSTANCE_URI+'/api/v1/statuses/'+status_.id+'/card'
-		,headers: {
-			Authorization : 'Bearer '+this.ACCESS_TOKEN
-		}
-		,method : 'GET'
-		,dataType: 'json'
-		,data : {
-			limit : this.toots_limit
-		}
-		,success: function(data_) {
-		
-host = data_.url.split("/")[2];
-card = '<a href="'+data_.url+'" class="status-card horizontal" style="max-width:'+(data_.width+2)+'px;" target="_blank" rel="noopener"><div class="status-card__image" style="background-image: url(\''+data_.image+'\'); width: '+data_.width+'px; height: '+data_.height+'px;" class="status-card__image-image"></div><div class="status-card__content"><strong class="status-card__title" title="'+data_.title+'">'+data_.title+'</strong><span class="status-card__description">'+data_.description+'</span><span class="status-card__host">'+host+'</span></div></a>';
-
-
 //console.log( status_ );
 		var content;
 
@@ -256,7 +236,7 @@ card = '<a href="'+data_.url+'" class="status-card horizontal" style="max-width:
 			);
 		}
 		else {
-			content = $(status_.content + card +
+			content = $(status_.content + '<span style ="display:inline-block" id="status'+status_.id+'"></span>' +
 				'<div class="toot-medias"></div>'
 			);
 		}
@@ -312,9 +292,26 @@ card = '<a href="'+data_.url+'" class="status-card horizontal" style="max-width:
 		toot.append( statusBar );
 		// <<<
 
+//fetch card
+var card = "";
 
+	// get request
+	$.ajax({
+		url: this.INSTANCE_URI+'/api/v1/statuses/'+status_.id+'/card'
+		,headers: {
+			Authorization : 'Bearer '+this.ACCESS_TOKEN
+		}
+		,method : 'GET'
+		,dataType: 'json'
+		,data : {
+			limit : this.toots_limit
+		}
+		,success: function(data_) {
 
-
+if (typeof data_.url !== 'undefined') {		
+host = data_.url.split("/")[2];
+$("#status"+status_.id).html('<a href="'+data_.url+'" class="status-card horizontal" style="max-width:'+(data_.width+2)+'px;" target="_blank" rel="noopener"><div class="status-card__image" style="background-image: url(\''+data_.image+'\'); width: '+data_.width+'px; height: '+data_.height+'px;" class="status-card__image-image"></div><div class="status-card__content"><strong class="status-card__title" title="'+data_.title+'">'+data_.title+'</strong><span class="status-card__description">'+data_.description+'</span><span class="status-card__host">'+host+'</span></div></a>');
+}
 
 			
 		}
