@@ -159,6 +159,10 @@ padding-bottom: 0;
 
 .mt-date {
 	float: right;
+font-size: smaller;
+position: absolute;
+bottom: 5px;
+right: 0;
 }
 
 .mt-date .nsfw {
