@@ -242,11 +242,11 @@ MastodonApi.prototype.listStatuses = function() {
 		}
 
 		var date = prepareDateDisplay(status_.created_at);
-		var timestamp = $("<div class='mt-date'><a href='"+status_.url+"'>" + date + "</a></div>");
+		var timestamp = "<span class='mt-date'><a href='"+status_.url+"'>" + date + "</a></span>";
 
 		// sensitive content
 		if(status_.sensitive) {
-			timestamp.prepend('<span class="nsfw">' + MastodonApi.text.nsfwLabel + '</span>');
+			timestamp = '<span class="nsfw">' + MastodonApi.text.nsfwLabel + '</span>' + timestamp;
 		}
 
 
@@ -264,7 +264,7 @@ MastodonApi.prototype.listStatuses = function() {
 		// add to HTML
 		toot.append( avatar );
 		toot.append( user );
-		toot.append( timestamp );
+
 		toot.append( content );
 
 		$('.mt-body', this.widget).append(toot);
@@ -288,8 +288,10 @@ MastodonApi.prototype.listStatuses = function() {
 		var statusBar = $('<div class="toot-status">' +
 			boostsCountIcon +
 			favouritesCountIcon +
+			timestamp +
 			'</div>');
 		toot.append( statusBar );
+
 		// <<<
 
 //fetch card

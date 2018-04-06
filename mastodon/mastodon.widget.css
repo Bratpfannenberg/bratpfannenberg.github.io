@@ -39,6 +39,12 @@ div.mt-user a:link, div.mt-user a:visited, div.mt-user a:active{
     color:#8899A6;
 }
 
+div.mt-user a{
+
+font-size: small;
+
+}
+
 a.status-card{
 display: inline-block;
 border: 1px solid lightgrey;
@@ -152,7 +158,7 @@ padding-bottom: 0;
 }
 
 .mt-date {
-	text-align: right;
+	float: right;
 }
 
 .mt-date .nsfw {
@@ -221,6 +227,7 @@ a.btn-spoiler {
 .toot-status {
 	font-weight: bold;
 	margin-top: 5px;
+display: block;
 }
 
 .toot-status .toot-status-boosts,
@@ -273,6 +280,7 @@ a.btn-spoiler {
 .mastodon-timeline-light .toot-status,
 .mastodon-timeline-light .mt-date a {
 	color: #aaa;
+
 }
 
 /* spoiler === */
