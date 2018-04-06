@@ -9,6 +9,13 @@
  */
 
 /* main container >>> */
+
+.mastodon-timeline-light a:link,
+.mastodon-timeline-light a:active,
+.mastodon-timeline-light a {
+	color: #f07300;
+}
+
 .mastodon-timeline {
 	box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 	font-family: sans-serif;
@@ -38,11 +45,7 @@ border: 1px solid lightgrey;
 border-radius: 4px;
 }
 
-a.status-card:link {
-    color: black;
-}
-
-a.status-card:visited {
+a.status-card:link, a.status-card:visited, a.status-card:active  {
     color: black;
 }
 
@@ -50,10 +53,6 @@ a.status-card:hover {
     color: black;
     background: white;
 }
-
-a.status-card:active {
-    color: black;
-} 
 
 .status-card__title{
 font-size: small;
@@ -260,12 +259,6 @@ a.btn-spoiler {
 .mastodon-timeline-light .mt-footer,
 .mastodon-timeline-light .mt-header {
 	/* background: #eee; */
-}
-
-.mastodon-timeline-light a:link,
-.mastodon-timeline-light a:active,
-.mastodon-timeline-light a {
-	color: #f07300;
 }
 
 .mastodon-timeline-light .mt-header {
