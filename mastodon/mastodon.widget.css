@@ -10,6 +10,18 @@
 
 /* main container >>> */
 
+span.mastodonlogo {
+    display: inline-block;
+    background-image: url(mastodon.svg);
+    background-size: 35px 35px;
+    background-repeat: no-repeat;
+    width: 35px;
+    height: 35px;
+    float: right;
+    margin-top: 12px;
+}
+
+
 .mastodon-timeline-light a:link,
 .mastodon-timeline-light a:active,
 .mastodon-timeline-light a {

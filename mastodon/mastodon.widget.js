@@ -141,7 +141,7 @@ MastodonApi.text = {
  */
 MastodonApi.prototype.makeWidget = function() {
 	this.widget.addClass('mastodon-timeline');
-	this.widget.append($('<div class="mt-header"><h4>Beiträge</h4> von <span class="user-link"></span></div>'));
+	this.widget.append($('<div class="mt-header"><h4>Beiträge</h4> von <span class="user-link"></span><a href="https://mastodon.social/@Bratpfannenberg"><span class="mastodonlogo"></span></a></div>'));
 	this.widget.append($('<div class="mt-body"><div class="mt-loading">lade...</div></div>'));
 	this.widget.append($('<div class="mt-footer"></div>'));
 };
