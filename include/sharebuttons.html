@@ -1,0 +1,63 @@
+<html>
+<head>
+<meta charset="utf-8">
+<script>
+    function getQueryVariable(variable)
+{
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+       }
+       return(false);
+}
+
+function base64_decode(str) {
+    // Going backwards: from bytestream, to percent-encoding, to original string.
+    return decodeURIComponent(atob(str).split('').map(function(c) {
+        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+    }).join(''));
+}
+
+var title = base64_decode(getQueryVariable("title"));
+var url = base64_decode(getQueryVariable("url"));
+var hashtags = base64_decode(getQueryVariable("hashtags"));
+var hashtagsescaped = base64_decode(getQueryVariable("hashtagsescaped"));
+
+
+</script>
+
+<script async src="https://cdn.ampproject.org/v0.js"></script>
+<script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+<script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+<style amp-custom>
+  /* any custom style goes here */
+ div.socialButtons{margin-top: 0.7vw;display:none;font-size:0;line-height:0}
+
+ @media screen and (min-width:956px){div.socialButtons{display:table;padding-left:0.4vw;margin-top: 0.4vw;}}
+
+ amp-social-share[type="pocket"]{background:url(https://bratpfannenberg.com/img/svg/pocket_white.svg) no-repeat center/36px 32px #ef4056;background-size:60%}amp-social-share[type="reddit"]{background:url(https://bratpfannenberg.com/img/svg/reddit-alien-head.svg) no-repeat center/1.9vw 1.6vw #FF4500}amp-social-share[type="mastodon"]{background:url(https://bratpfannenberg.com/img/svg/mastodon.svg) no-repeat center/1.5vw 1.6vw #2b90d9}amp-social-share[type="diaspora"]{background:url(https://bratpfannenberg.com/img/svg/diasporaWhite.svg) no-repeat center/2.2vw 1.6vw grey}div.subtitle{font-size:2vw;text-align:center;position:relative;margin-left:1vw;bottom:.1vw}
+
+amp-social-share{opacity:.8;transition:opacity .5s}amp-social-share:hover{opacity:1}
+ .share-module{border-bottom:0;position:absolute;z-index:1;right: 0px;}.share-module section,.share-module header{border:0}.share-module p.text-label{color:#1c79c0;text-align:center;position:relative;top:2.2vw}.share-module .control header{width:4.5vw;height:4.5vw;background-color:transparent;padding-right:0;position:relative;left:-10px;top:-10px;transition:height .5s}.share-module .toggle-buttons{position:absolute;width:3.2vw;height:3.2vw;top:10px;left:10px;background:#f07300;z-index:1;border-radius:50%;box-shadow: 0 0.2vw 0.4vw 0 rgba(0,0,0,0.15);}.share-module .button-open,.share-module .button-close{position:absolute;top:0;left:0;width:3vw;height:3vw}.share-module .button-open{background:url(https://bratpfannenberg.com/img/svg/ic_share.svg) center/38% no-repeat;transition:opacity .25s}.share-module .button-close{display:none;background:url(https://bratpfannenberg.com/img/svg/close.svg) center/38% no-repeat}.share-module .share-buttons{position:absolute;width:24vw;height:5vw;top:1px;left:1px;overflow: visible !important;}.share-module .share-buttons amp-social-share{position:absolute;width:63px;height:63px;top:0;left:0;transition:transform .25s ease-in-out,opacity .5s;border-radius:50%;}.share-module .share-content{position:absolute;top:0}.share-module .share-content header{height:0}.share-module .control[expanded] header{height:4vw}.share-module .control[expanded] .button-close{display:block}.share-module .control[expanded] .button-open{opacity:0}.share-module .control[expanded]+section amp-social-share:nth-child(1){transform:translateX(-3.5vw)}.share-module .control[expanded]+section amp-social-share:nth-child(2){transform:translateX(-7vw)}.share-module .control[expanded]+section amp-social-share:nth-child(3){transform:translateX(-10.5vw)}.share-module .control[expanded]+section amp-social-share:nth-child(4){transform:translateX(-14vw)}.share-module .control[expanded]+section amp-social-share:nth-child(5){transform:translateX(-17.5vw)}.share-module .control[expanded]+section amp-social-share:nth-child(6){transform:translateX(-21vw)}.amp-social-share-twitter {background-size: 70%;}.amp-social-share-tumblr {background-size: 70%;}*:focus {outline: none;}
+
+</style>
+</head>
+<body>
+
+<div class="socialButtons"><amp-accordion disable-session-states class="share-module"><section class="control"><header><div class="toggle-buttons"><div class="button-open"></div><div class="button-close"></div></div></header><p></p></section><section expanded class="share-content"><header></header><div class="share-buttons"><amp-social-share width="3vw" height="3vw" type="mastodon" id="mastodon" data-share-endpoint="web+mastodon://share" data-param-text="replace me"></amp-social-share><amp-social-share id="diaspora" width="3vw" height="3vw" type="diaspora" data-share-endpoint="replace me" data-param-notes="replace me"></amp-social-share><amp-social-share id="pocket" width="3vw" height="3vw" type="pocket" data-share-endpoint="https://getpocket.com/save?url=CANONICAL_URL"></amp-social-share><amp-social-share width="3vw" height="3vw" type="email" ></amp-social-share></div></section></amp-accordion></div>
+<script>
+document.getElementById("mastodon").setAttribute("data-param-text",title+' '+url+' '+hashtags);
+document.getElementById("diaspora").setAttribute("data-share-endpoint",'http://sharetodiaspora.github.io/?url='+url+'&title=' +title);
+document.getElementById("diaspora").setAttribute("data-param-notes",hashtagsescaped);
+document.getElementById("pocket").setAttribute("data-share-endpoint",'https://getpocket.com/save?url='+url);
+
+
+</script>
+</body>
+
+
+
+</html>
