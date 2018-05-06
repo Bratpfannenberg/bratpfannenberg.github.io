@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+body { box-sizing: border-box; margin: 0;font-family: "Play";}
+:root {
+  --main-duration: 80s;
+}
+$duration: 80s;
+
+@-webkit-keyframes ticker {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes ticker {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.ticker-wrap {
+  
+  position: fixed;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  height: 4rem;
+  background-color: #f07300; 
+  padding-left: 100%;
+  box-sizing: content-box;
+}
+  .ticker {
+
+    display: inline-block;
+    height: 4rem;
+    line-height: 4rem;  
+    white-space: nowrap;
+    padding-right: 100%;
+    box-sizing: content-box;
+
+    -webkit-animation-iteration-count: infinite; 
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+   -webkit-animation-name: ticker;
+           animation-name: ticker;
+    -webkit-animation-duration: $duration;
+            animation-duration: var(--main-duration);
+
+}
+
+    .ticker__item {
+
+      display: inline-block;
+
+      font-size: 2rem;
+      color: white;   
+
+    }
+    
+    .ticker__item::after {
+      padding-right:2rem;
+      padding-left:2rem;
+    content: "+++";
+}
+
+</style>
+</head>
+<body>
+<div class="ticker-wrap">
+<div class="ticker">
+  <div class="ticker__item">Veröffentlichungen:</div>
+  <div class="ticker__item"><b>21. Mai 2018:</b> <i>V-Jump</i>-Juliausgabe mit <i>Dragon Ball Super</i>-Kapitel 36 (JP)</div>
+  <div class="ticker__item"><b>Anfang Juni 2018:</b> <i>Saikyō Jump</i>-Juliausgabe mit <i>Dragon Ball SD</i>-Kapitel 43, <i>Dragon Ball GT</i>-Anime-Comic-Kapitel 20 und <i>Super Dragon Ball Heroes: Universe Mission</i>-Kapitel 2 (JP)</div>
+  <div class="ticker__item"><b>19. Juni 2018:</b> <i>Dragon Ball Super</i> Part Four mit Episode 40-52 (US)</div>
+  <div class="ticker__item"><b>2. Oktober 2018:</b> <i>Dragon Ball Super</i>-Band 4 (DE)</div>
+  <div class="ticker__item"><b>27. November 2018:</b> <i>Dragon Ball Side Stories: Yamchu</i> (DE)</div>
+  <div class="ticker__item"><b>14. Dezember 2018:</b> <i>Dragon Ball Super</i>-Kinofilm (JP)</div>
+  <div class="ticker__item"><b>29. Januar 2019:</b> <i>Dragon Ball SD</i>-Band 5 (DE)</div>
+  <div class="ticker__item"><b>2018:</b> <i>Dragon Ball Legends</i> (iOS/Android)</div>
+  <div class="ticker__item"><i>Dragon Ball</i> im TV/Web:</div>
+  <div class="ticker__item"><b>Dragon Ball Kai:</b> Mo-Fr @ Prosieben MAXX</div>
+  <div class="ticker__item"><b>Dragon Ball Super:</b> Alle Episoden (1-131) @ dbs-cardgame.com/anime</div>
+</div>
+</div>
+</body>
+
+
+
+</html>
