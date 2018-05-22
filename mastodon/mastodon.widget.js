@@ -312,6 +312,12 @@ var card = "";
 
 if (typeof data_.url !== 'undefined') {		
 host = data_.url.split("/")[2];
+if(data_.image==null){
+data_.width=400;
+data_.height=210;
+}
+
+
 $("#status"+status_.id).html('<a href="'+data_.url+'" class="status-card horizontal" style="max-width:'+(data_.width+2)+'px;" target="_blank" rel="noopener"><div class="status-card__image" style="background-image: url(\''+data_.image+'\'); width: '+data_.width+'px; height: '+data_.height+'px;" class="status-card__image-image"></div><div class="status-card__content"><strong class="status-card__title" title="'+data_.title+'">'+data_.title+'</strong><span class="status-card__description">'+data_.description+'</span><span class="status-card__host">'+host+'</span></div></a>');
 }
 
